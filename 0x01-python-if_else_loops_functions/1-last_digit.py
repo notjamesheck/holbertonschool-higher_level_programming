@@ -1,16 +1,16 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
-numb = number
-if numb < 0:
-    ones = abs(numb) % 10
-    ones = ones * -1
+nu = number
+if nu < 0:
+    nt = abs(nu) % 10
+    nt = nt * -1
 else:
-    ones = numb % 10
+    nt = nu % 10
 
-if ones > 5:
-    print("Last digit of {} is {} and greater than 5".format(ones, numb))
-elif ones < 6 and ones != 0:
-    print("Last digit of {} is {} is less than 6 and not 0".format(ones, numb))
-elif ones == 0:
-    print("Last digit of {} is {} and is 0".format(ones, numb))
+if nt > 5:
+    print("Last digit of {} is {} and is greater than 5".format(nt, nu))
+elif nt < 6 and nt != 0:
+    print("Last digit of {} is {} and is less than 6 and not 0".format(nt, nu))
+elif nt == 0:
+    print("Last digit of {} is {} and is 0".format(nt, nu))
