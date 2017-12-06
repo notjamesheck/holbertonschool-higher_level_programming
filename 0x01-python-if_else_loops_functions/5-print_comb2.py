@@ -1,2 +1,4 @@
 #!/usr/bin/python3
-print(*list(range(00, 100)), sep=', ')
+for a in range(100):
+    print('{:02d}'.format(a), end="")
+    print(", " if (a != 99) else "\n", end="")
