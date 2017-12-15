@@ -8,6 +8,6 @@ def search_replace(my_list, search, replace):
         s = search
     for i in newl:
         if newl[i] == newl[s]:
-            newl[s] = r
+            newl[i] = r
             break
     return newl
