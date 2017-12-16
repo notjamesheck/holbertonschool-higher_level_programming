@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    if roman_string:
+    if isinstance(roman_string, str):
         sump = 0
         itera = list(roman_string)
         for a in itera:
@@ -18,4 +18,6 @@ def roman_to_int(roman_string):
                 sump += 500
             elif a == 'M':
                 sump += 1000
-    return sump
+        return sump
+    else:
+        return roman_string
