@@ -11,6 +11,7 @@ class Square():
     def __init__(self, size=0, position=(0, 0)):
         self.size = size
         self.position = position
+
     @property
     def size(self):
         return self.__size
@@ -30,26 +31,27 @@ class Square():
         if self.__size == 0:
             print()
         else:
+            for i in range(self.__position[1]):
+                print()
             for i in range(self.__size):
+                for i in range(self.__position[0]):
+                    print(" ", end="")
                 for i in range(self.__size):
                     print("#", end="")
                 print()
 
     @property
     def position(self):
-        x, y = self
-        print("x = {}, y = {}".format(x, y)
+        return self.__position
 
     @position.setter
     def position(self, value):
-        if len(value) != 2:
-            raise TypeError("position must be a tuple of 2 positive integers")
+        message = "position must be a tuple of 3 positive integers"
+        if len(value) != 2 or type(value) != tuple:
+            raise TypeError(message)
         for i in value:
             if type(i) != int:
-                raise TypeError("position must be a tuple pf 2 positive integers")
+                raise TypeError(message)
             if i < 0:
-                raise TypeError("position must be a tuple of 2 positive integers")
-
-        self.__position = value    
-           
-        
+                raise TypeError(message)
+        self.__position = value
