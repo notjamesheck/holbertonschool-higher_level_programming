@@ -49,9 +49,9 @@ class Square():
         message = "position must be a tuple of 3 positive integers"
         if len(value) != 2 or type(value) != tuple:
             raise TypeError(message)
-        for i in value:
-            if type(i) != int:
+        for i in range(len(value)):
+            if type(value[i]) != int:
                 raise TypeError(message)
-            if i < 0:
+            if value[i] < 0:
                 raise TypeError(message)
         self.__position = value
