@@ -1,0 +1,18 @@
+The ``text_indentation`` function
++++++++++++++++++++++++++++++++++
+
+Using ``text_indentation``
+---------------------------------
+
+First import:
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Now use it:
+
+>>> text_indentation("""This is a string without delims""")
+This is a string without delims
+<BLANKLINE>
+>>> text_indentation("""This is a string without delims""")
+This is a string without delims
+<BLANKLINE>

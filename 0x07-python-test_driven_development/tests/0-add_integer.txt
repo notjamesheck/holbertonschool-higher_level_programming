@@ -1,0 +1,42 @@
+The ``add_integer`` function
+++++++++++++++++++++++++++++
+
+Using ``add_integer``
+This function adds two integers
+and two integers ONLY
+----------------------------
+
+This is a text file in reStructuredText format.
+First import function from 0x07 folder:
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Now use it:
+
+>>> add_integer(1, 2)
+3
+
+>>> add_integer(100, -2)
+98
+
+>>> add_integer(100.3, -2)
+98
+
+>>> add_integer("loop", 9)
+Traceback (innermost last):
+TypeError: a must be an integer
+
+>>> add_integer({8:"loop"}, 9)
+Traceback (innermost last):
+TypeError: a must be an integer
+
+>>> add_integer((0, 8), 9)
+Traceback (innermost last):
+TypeError: a must be an integer
+
+>>> add_integer("str", "str")
+Traceback (innermost last):
+TypeError: a must be an integer
+
+>>> add_integer(542e42, 252e1)
+541999999999999970168179552781759870931044824

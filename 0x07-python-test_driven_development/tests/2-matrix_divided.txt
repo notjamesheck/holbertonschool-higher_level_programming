@@ -1,0 +1,41 @@
+The ``matrix_divided`` function
+++++++++++++++++++++++++++++++++++++++++++++++
+
+Using ``matrix_divided``
+This function divides all elements of a matrix
+Matrices must consist of numbers 
+and have equal column lengths
+----------------------------------------------
+
+This is a text file in reStructured format:
+First import the function for 0x07 folder:
+
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Now use it:
+
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+
+>>> print(matrix_divided(matrix, 3))
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+>>> matrix = [[1, 2, "fish"], [4, 5, 6]]
+
+>>> print(matrix_divided(matrix, 3))
+Traceback (innermost last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> print(matrix_divided(matrix, 0))
+Traceback (innermost last):
+ZeroDivisionError: division by zero
+
+>>> matrix = [[1, 2, 3], [4, 5]]
+>>> print(matrix_divided(matrix, 2))
+Traceback (innermost last):
+TypeError: Each row of the matrix must have the same size
+
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> print(matrix_divided(matrix, "h"))
+Traceback (innermost last):
+TypeError: div must be a number
