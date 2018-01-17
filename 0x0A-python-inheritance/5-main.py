@@ -1,4 +1,6 @@
-#!/data/data/com.termux/files/usr/bin/python3
+#!/usr/bin/python3
+
+
 BaseGeometry = __import__('5-base_geometry').BaseGeometry
 
 bg = BaseGeometry()
