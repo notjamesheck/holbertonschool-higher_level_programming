@@ -3,5 +3,5 @@ import json
 
 
 def save_to_json_file(my_obj, filename):
-    with open(filename, 'w') as poo:
+    with open(filename, mode='w', encoding='utf-8') as poo:
         json.dump(my_obj, poo)
