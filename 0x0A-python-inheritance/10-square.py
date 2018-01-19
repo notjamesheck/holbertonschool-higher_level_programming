@@ -1,4 +1,4 @@
-#!/ sr/bin/python3
+#!/usr/bin/python3
 
 
 class BaseGeometry():
@@ -28,3 +28,12 @@ class Rectangle(BaseGeometry):
 
     def __str__(self):
         return "[Rectangle] {}/{}".format(self.__width, self.__height)
+
+
+class Square(Rectangle):
+
+    def __init__(self, size):
+
+        self.integer_validator("size", size)
+        self.__size = size
+        super().__init__(size, size)
