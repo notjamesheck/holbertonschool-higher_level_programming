@@ -1,25 +1,7 @@
 #!/usr/bin/python3
+from models.base import Base
 """
 """
-
-
-class Base():
-    """define class, non-base counter
-    """
-    __nb_objects = 0
-
-    def __init__(self, id=None):
-        """init self and id
-        """
-        if id is not None:
-            """value of base object
-            """
-            self.id = id
-        else:
-            """count num of non-base objects
-            """
-            Base.__nb_objects += 1
-            self.id = Base.__nb_objects
 
 
 class Rectangle(Base):
@@ -131,7 +113,7 @@ class Rectangle(Base):
                 if i == 4:
                     self.y = args[4]
 
-        else:
+        elif kwargs:
             for k, v in kwargs.items():
                 if k == 'id':
                     self.id = v
@@ -143,3 +125,10 @@ class Rectangle(Base):
                     self.x = v
                 if k == 'y':
                     self.y = v
+
+    def to_dictionary(self):
+        x = {'x': self.x, 'y': self.y, 'id': self.id}
+        y = {'height': self.height, 'width': self.width}
+        z = x.copy()
+        z.update(y)
+        return z
