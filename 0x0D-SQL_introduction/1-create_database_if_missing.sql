@@ -1,2 +1,4 @@
--- comment
-CREATE DATABASE hbtn_0c_0;
+-- 1
+IF NOT hbtn_0c_0 THEN CREATE DATABASE hbtn_0c_0
+END IF
+;
