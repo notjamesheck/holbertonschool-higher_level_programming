@@ -1,2 +1,2 @@
 -- problem 0
-SHOW DATABASE;
+SHOW DATABASES;
