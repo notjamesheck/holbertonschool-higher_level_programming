@@ -1,2 +1,2 @@
 -- cinco
-SHOW first_table FROM hbtn_0c_0;
+SHOW first_table IN hbtn_0c_0;
