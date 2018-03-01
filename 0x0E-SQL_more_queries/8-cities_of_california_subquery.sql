@@ -1,2 +1,2 @@
 -- comment
-SELECT id, name FROM cities ORDER BY cities.id DESC;
+SELECT id, name FROM cities WHERE state_id = 1 ORDER BY cities.id ASC;
