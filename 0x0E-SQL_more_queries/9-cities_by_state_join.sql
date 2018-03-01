@@ -1,2 +1,2 @@
 -- comment
-SELECT cities.id, cities.name FROM cities INNER JOIN states ON cities.name = states.name;
+SELECT c.id, c.name, s.name FROM cities c JOIN states s ON s.id = c.state_id;
