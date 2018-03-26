@@ -16,6 +16,7 @@ if __name__ == '__main__':
     for poop in session.query(State).order_by(State.name):
         if 'a' in poop.name:
             session.delete(poop)
-            session.commit()
+
+    session.commit()
 
     session.close()
