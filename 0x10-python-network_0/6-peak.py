@@ -16,6 +16,10 @@ def find_peak(list_of_integers):
         '''
         return list_of_integers[0]
 
+
+    return max(list_of_integers)
+    '''
     for num in list_of_integers:
+    '''
         '''
         '''
