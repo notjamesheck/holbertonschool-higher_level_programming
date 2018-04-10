@@ -5,12 +5,14 @@
 import requests
 import sys
 
-if sys.argv[1]:
-    r = requests.post('http://34.206.234.184:38297/search_user', data={'q': sys.argv[1]})
-    print('[{}] {}'.format(r.json()['id'], r.json()['name']))
+if '__name__' == '__main__':
 
-if r.json() is None and sys.argv[1]:
-    r = requests.post('http://34.206.234.184:38297/search_user', data={'q': sys.argv[1]})
-    print('Not a valid JSON')
-elif r.json() is None:
-    print('No result')
+    if sys.argv[1]:
+        try:
+            r = requests.post('http://34.206.234.184:38297/search_user',
+                              data={'q': sys.argv[1]})
+            print('[{}] {}'.format(r.json()['id'], r.json()['name']))
+        except KeyError:
+            print('Not a valid JSON')
+    else:
+        print('No result')
