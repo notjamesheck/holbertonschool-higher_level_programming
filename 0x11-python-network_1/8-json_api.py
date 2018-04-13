@@ -7,6 +7,7 @@ import sys
 
 if __name__ == '__main__':
 
+    q = ""
     if len(sys.argv) > 1:
         r = requests.post('http://172.31.54.208:38344/search_user',
                           data={'q': sys.argv[1]})
@@ -20,5 +21,4 @@ if __name__ == '__main__':
         except Exception:
             print('Not a valid JSON')
     else:
-
         print('No result')
