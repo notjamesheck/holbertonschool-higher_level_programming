@@ -9,10 +9,10 @@ import sys
 
 if __name__ == "__main__":
 
-email = { 'email' : sys.argv[2] }
-email_data = parse.urlencode(email)
-email_data = email_data.encode('ascii')
-req = request.Request(sys.argv[1], email_data)
-with request.urlopen(req) as data:
-    fuuuu = data.read()
-    print(fuuuu)
+    email = { 'email' : sys.argv[2] }
+    email_data = parse.urlencode(email)
+    email_data = email_data.encode('ascii')
+    req = request.Request(sys.argv[1], email_data)
+    with request.urlopen(req) as data:
+        fuuuu = data.read()
+        print(fuuuu)
