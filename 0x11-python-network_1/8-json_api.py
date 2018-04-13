@@ -7,7 +7,7 @@ import sys
 
 if __name__ == '__main__':
 
-    q = ""
+    data = {'q' : ""}
     if len(sys.argv) > 1:
         r = requests.post('http://172.31.54.208:38344/search_user',
                           data={'q': sys.argv[1]})
