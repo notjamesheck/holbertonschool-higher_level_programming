@@ -10,6 +10,16 @@ if __name__ == '__main__':
     r = requests.get('https://swapi.co/api/people/?search={}'.
                      format(sys.argv[1]))
     print('Number of results: {}'.format(r.json()['count']))
-    results = r.json()['results']
-    for val in results:
-        print(val['name'])
+    # ah = r.json()['next']
+    while (r):
+        for d in r.json()['results']:
+            print(d['name'])
+        try:
+            r = requests.get(r.json()['next'])
+        except:
+            break
+
+    # [print(d) for d in r.json()['results']]
+    # while r.json()['next']:
+    #     r = requests.get(r.json()['next'])
+    #     [print(d) for d in r.json()['results']]
