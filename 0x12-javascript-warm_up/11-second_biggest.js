@@ -6,10 +6,10 @@ let len = process.argv.length;
 function second (len) {
   let arr = [];
   for (let i = 2; i < len; i++) {
-    arr.push(process.argv[i]);
+    arr.push(parseInt(process.argv[i]));
   }
   arr.sort();
-  return (arr[1]);
+  return (arr[`${arr.length - 2}`]);
 }
 
 if (len < 4) {
