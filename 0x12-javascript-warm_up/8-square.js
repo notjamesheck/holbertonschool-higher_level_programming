@@ -3,7 +3,7 @@
 
 let x = parseInt(process.argv[2]);
 
-if (!x || inNaN(x)) {
+if (!x || isNaN(x)) {
   console.log('Missing size');
 } else {
   for (let i = 0; i < x; i++) {
