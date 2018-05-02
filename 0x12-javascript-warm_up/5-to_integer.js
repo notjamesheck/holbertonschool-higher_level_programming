@@ -1,5 +1,6 @@
 #!/usr/bin/node
-// comment
+/* prints My number: "" if the
+first argument can be converted to an integer */
 
 let a = parseInt(process.argv[2]);
 if (isNaN(a)) {

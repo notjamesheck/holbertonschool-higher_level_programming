@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// comment
+// prints '''x''' times “C is fun”
 
 let x = parseInt(process.argv[2]);
 if (!x) {

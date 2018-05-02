@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// comment
+// recursively computes and prints a factorial
 
 let num = parseInt(process.argv[2]);
 

@@ -1,5 +1,6 @@
 #!/usr/bin/node
-// comment
+/* script that prints the
+addition of 2 integers */
 
 let a = parseInt(process.argv[2]);
 let b = parseInt(process.argv[3]);

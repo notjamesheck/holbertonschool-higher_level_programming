@@ -1,5 +1,6 @@
 #!/usr/bin/node
-// comment
+/* prints 3 lines by using
+an array of string and a loop */
 
 let myVar = [];
 myVar.push('C is fun');

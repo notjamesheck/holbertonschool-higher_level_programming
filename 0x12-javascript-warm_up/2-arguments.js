@@ -1,5 +1,6 @@
 #!/usr/bin/node
-// comment
+/* prints a message depending
+on the number of arguments passed */
 
 let myVar = process.argv.length;
 if (myVar === 3) {

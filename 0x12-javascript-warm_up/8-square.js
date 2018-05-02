@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// comment
+// script that prints a square
 
 let x = parseInt(process.argv[2]);
 if (!x) {

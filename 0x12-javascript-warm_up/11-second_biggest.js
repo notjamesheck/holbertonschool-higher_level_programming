@@ -1,5 +1,6 @@
 #!/usr/bin/node
-// comment
+/* searches the second biggest
+integer in the list of arguments */
 
 let len = process.argv.length;
 
