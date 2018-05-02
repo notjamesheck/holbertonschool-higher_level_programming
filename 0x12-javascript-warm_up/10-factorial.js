@@ -1,9 +1,9 @@
 #!/usr/bin/node
 // comment
 
-var num = parseInt(process.argv[2]);
+let num = parseInt(process.argv[2]);
 
-var factorial = function (n) {
+function factorial(n) {
   if (n === 0 || isNaN(n)) {
     return 1;
   } else {
