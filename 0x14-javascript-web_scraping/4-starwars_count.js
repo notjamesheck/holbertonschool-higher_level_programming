@@ -10,7 +10,7 @@ let req = require('request');
 req({ uri: ep, method: 'GET', json: true }, function (error, response, body) {
   if (error) throw error;
   let c = 0;
-  for (let i = 0; i < body.results.length - 1; i++) {
+  for (let i = 0; i < body.results.length; i++) {
     c += body.results[i].characters.filter(function (val) {
       return val === wA;
     }).length;
